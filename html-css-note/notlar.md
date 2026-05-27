@@ -1,8 +1,10 @@
 # JavaScript Yazım ve Noktalama Kuralları
+
 1- Açıklama satırları ve boşluk karakterleri gözardı edilir, derlenmez.
 2- Her komutun sonuna noktalı virgül koyulur.
 3- JavaScript dili büyük-küçük harf duyarlı bir dildir. Örneğin Sayi=20, sayi=10 // farklı değişkenler.
 4- Bazı JavaScript komutlarında blok denilen yapılar kullanılır. Blokların başlangıç ve bitiş yerini adına küme parantezi denilen işaretler belirler. Örneğin if(saat < 18) {document.write("selam);}
+
 # Değişken Oluşturma
 
 JavaScript'te değişken oluşturmak için var komutu kullanılır.
@@ -33,3 +35,16 @@ y=20;
 🔘 Değişkenlere sözel değer atanacaksa çift tırnak ("...") içinde atanmalıdır. exp: var ad="hikmet"; //gibi
 🔘 JavaScript büyük-küçük harf duyarlı bir dildir; sayi ile Sayi değişkenleri birbirinden farklıdır.
 🔘 JavaScript dilinde ş,ç,ü,I,ğ gibi Türkçe harfler kullanılabilir fakat pek tercih edilmemelidir çünkü umulmadık yerlerde hata alabilirsiniz.
+
+# Data Printing
+🔘 Yapılan işlem sonuçlarını ekranda görmek için document.write(), alert(), console.log() veya innerHTML komutlarını kullanabiliriz.
+
+- alert("mesaj penceresi"); // en kolayı
+
+- document.write("ilk satır"); //sayfaya yazar
+- document.write(<br>);
+- document.write("ikinci satır");
+
+- console.log("konsola yaz"); //konsola yazar
+
+- document.getElementById("h1Baslik").innerHTML="Başlık";
