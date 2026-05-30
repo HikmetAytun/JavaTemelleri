@@ -48,3 +48,10 @@ y=20;
 - console.log("konsola yaz"); //konsola yazar
 
 - document.getElementById("h1Baslik").innerHTML="Başlık";
+
+# Data Reading
+🔘 Ziyaretçiden veri almak için HTML formları veya promt() komutu kullanılabilir.
+- var ad=prompt("adınızı giriniz:")
+- document.write(ad)
+
+🔘 HTML formlarından veri okumayı ilerleyen derslerde öğreneceğiz.
