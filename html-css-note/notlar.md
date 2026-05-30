@@ -55,3 +55,16 @@ y=20;
 - document.write(ad)
 
 🔘 HTML formlarından veri okumayı ilerleyen derslerde öğreneceğiz.
+
+# Verbal Addition (Sözel Toplama)
+
+📌 Metinleri veya değişkenleri yan yana göstermek veya başka bir ifade ile yan yana yazdırmak için "sözel toplama" yapılır.
+
+📌 Sözel toplamada artı (+) karakteri aşağıdaki gibi kullanılır.
+
+- var ad="ahmet"
+- document.write("adınız"+ad);
+
+- var isim="ali"
+- var soyisim="kal"
+- documet.write("adınız:"+isim+"soyadınız:"+soyisim);
