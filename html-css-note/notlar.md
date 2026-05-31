@@ -68,3 +68,26 @@ y=20;
 - var isim="ali"
 - var soyisim="kal"
 - documet.write("adınız:"+isim+"soyadınız:"+soyisim);
+
+# Variable Data Types
+
+✏️ JavaScript dilinde oluşturduğunuz değişkenlere değişik türde değerler/veriler atayabilirsiniz.
+
+✏️ JavaScript değişkenleri dinamik veri tipindedir; atadığınız değere göre otomatik olarak veritipi değişir.
+
+✏️ Örneğin, bir değişkene 5 değerini atarsanız değişken veritipi otomatik olarak sayısal (Number), "deneme" değerini atarsanız otomatik olarak sözel (String) veritipine dönüşür.
+
+- var x=5;      //sayısal değer (Number)
+- var ad="Mehmet"   //sözel değer(String)
+
+- Number = Sayısal veri: Değişkenlere atanan tamsayı veya ondalıklı değerler değişken veritipini Number yapar.
+
+- String = Sözel veri: Değişkenlere atanan karakter veya metinler değişkenin veritipini String yapar.
+
+- Boolean = Mantıksal veri: Bir değişkene true ve false değerini atarsanız bu değişken Booelan tipine dönüşür.
+
+- Array = Dizi: Diziler birden fazla değer taşıyan değişkenlerdir.
+
+- Undefined = Herhangi bir JavaScript değişkeni tanımlanmış ama değer atanmamışsa değişkenin veri tipi Undefined olarak görülür.
+
+- Null = Boş veya değer yok.
