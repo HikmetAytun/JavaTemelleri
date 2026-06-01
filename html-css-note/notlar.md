@@ -91,3 +91,18 @@ y=20;
 - Undefined = Herhangi bir JavaScript değişkeni tanımlanmış ama değer atanmamışsa değişkenin veri tipi Undefined olarak görülür.
 
 - Null = Boş veya değer yok.
+
+# Learning About Variable Data Types
+✅ JavaScript değişkenlerinin veri tipinin öğrenmenin en kolay yolu typeof() komutunu kullanmaktadır. Bu komut parantez içine yazılan değişkenin veri tipini döndürür.
+
+✅ Kullanımı aşağıdaki gibidir:
+
+🟠  var x=5;
+    document.write("veri tipi:"+typeof(x)+"<br>");      //number
+
+🟠  x="ali";
+    document.write("veri tipi:"+typeof(x)+"<br>");      //string
+
+🟠  x=true;
+    document.write("veri tipi:"+typeof(x)+"<br>");      //boolean
+
