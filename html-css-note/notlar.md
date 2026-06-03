@@ -106,3 +106,19 @@ y=20;
 🟠  x=true;
     document.write("veri tipi:"+typeof(x)+"<br>");      //boolean
 
+#  Data Type Conversion
+⚪  JavaScript değişkenlerinin veritipini değiştirmek için aşağıdaki komutlar kullanılır.
+
+♻  Number(veri) **Parantez içindeki veriyi sayısal değere dönüştürür.**
+♻  String(veri) **Parantez içindeki veriyi sözel değere dönüştürür.**
+♻  Boolean(veri) **Verinini Boolean tipine dönüştürülmesini sağlar. Sıfırdan büyük tüm değerler ve metinler true; boş, sıfır ve daha küçük değerler ile null ve undefined değerleri false veritipine dönüştürülür**
+♻  Date(veri)   **Verinin Date(tarih) tipinin dönüştürülmesini sağlar**
+
+#  Using HTML in JavaScript
+◽   HTML içinde JavaScript, JavaScript içinde HTML kodu kullanılabilir.
+◽   HTML kodu içinde JavaScript kodu yazmak için <script> etiketi kullanılır.
+◽   JavaScript içinde HTML kodu "metin" olarak yazılır.
+    🔵  var ad="Ahmet";
+    🔵  document.write("merhaba <b>ad</b>");
+    🔵  document.write("<br>");
+    🔵  document.write("web sitemize hoş geldiniz!");

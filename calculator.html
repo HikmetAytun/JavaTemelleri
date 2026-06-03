@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hesap Makinesi</title>
+
+  <!-- ====================================================== -->
+  <!-- KATMAN 2: CSS — sadece görünüş. Renk, şekil, boyut.    -->
+  <!-- ====================================================== -->
+  <style>
+    body {
+      font-family: monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #1e293b;
+      margin: 0;
+    }
+
+    .makine {
+      background: gray;
+      padding: 30px;
+      border-radius: 50px;
+      width: 350px;
+    }
+
+    /* Ekran: yazdığımız sayıların göründüğü yer */
+    .ekran {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      background: black;
+      color: lightblue;
+      font-size: 32px;
+      text-align: right;
+      padding: 30px;
+      border-radius: 30px;
+      margin-bottom: 12px;
+      min-height: 40px;
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+
+    /* Butonları 4'lü ızgara halinde diz */
+    .tuslar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+
+    button {
+      padding: 18px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #2b3747;
+      color: #48a5db;
+    }
+
+    button:hover { background: #475569; }
+
+    /* Operatör tuşları (+ - × ÷ =)  */
+    .operator { background: #4ea7e2; color: #000000; }
+    .operator:hover { background: #e4ad22; }
+
+    /* Temizle tuşu kırmızımsı */
+    .sil { background: #940707; }
+    .sil:hover { background: #71f893; }
+  </style>
+</head>
+<body>
+
+  <!-- ====================================================== -->
+  <!-- KATMAN 1: HTML — iskelet. Ekran + butonlar.            -->
+  <!-- ====================================================== -->
+  <div class="makine">
+
+    <!-- Ekran: id'si "ekran". JS buraya yazacak. -->
+    <div class="ekran" id="ekran">0</div>
+
+    <div class="tuslar">
+      <!-- her butona onclick ile bir JS fonksiyonu bağlı -->
+      <button class="sil" onclick="temizle()">C</button>
+      <button class="operator" onclick="operatorSec('/')">÷</button>
+      <button class="operator" onclick="operatorSec('*')">×</button>
+      <button class="operator" onclick="sil()">⌫</button>
+
+      <button onclick="sayiGir('7')">7</button>
+      <button onclick="sayiGir('8')">8</button>
+      <button onclick="sayiGir('9')">9</button>
+      <button class="operator" onclick="operatorSec('-')">−</button>
+
+      <button onclick="sayiGir('4')">4</button>
+      <button onclick="sayiGir('5')">5</button>
+      <button onclick="sayiGir('6')">6</button>
+      <button class="operator" onclick="operatorSec('+')">+</button>
+
+      <button onclick="sayiGir('1')">1</button>
+      <button onclick="sayiGir('2')">2</button>
+      <button onclick="sayiGir('3')">3</button>
+      <button class="operator" onclick="hesapla()" style="grid-row: span 2;">=</button>
+
+      <button onclick="sayiGir('0')" style="grid-column: span 2;">0</button>
+      <button onclick="sayiGir('.')">.</button>
+    </div>
+  </div>
+
+  <!-- ====================================================== -->
+  <!-- KATMAN 3: JAVASCRIPT — beyin. Asıl öğreneceğin yer.    -->
+  <!-- ====================================================== -->
+  <script>
+    // --- HAFIZA (değişkenler) ---
+    // Hesap makinesi 3 şeyi hatırlamak zorunda:
+    let suankiSayi = "";   // şu an yazdığımız sayı (örn "12")
+    let oncekiSayi = "";   // operatöre basmadan önceki sayı
+    let operator = "";     // hangi işlem? (+, -, *, /)
+
+    // Ekrandaki yazıyı tazeleyen yardımcı fonksiyon
+    function ekraniGuncelle() {
+      const ekran = document.getElementById("ekran");
+      ekran.textContent = suankiSayi || oncekiSayi || "0";
+    }
+
+    // Bir rakama (veya noktaya) basınca çalışır
+    function sayiGir(rakam) {
+      suankiSayi = suankiSayi + rakam;   // yan yana ekle: "1" + "2" = "12"
+      ekraniGuncelle();
+    }
+
+    // Bir operatöre (+, -, ×, ÷) basınca çalışır
+    function operatorSec(secilen) {
+      if (suankiSayi === "") return;     // hiç sayı yoksa, görmezden gel
+      oncekiSayi = suankiSayi;           // yazdığımızı "önceki"ye taşı
+      operator = secilen;                // operatörü hatırla
+      suankiSayi = "";                   // yeni sayı için ekranı boşalt
+    }
+
+    // "=" tuşuna basınca işlemi yapar
+    function hesapla() {
+      // string olan sayıları gerçek sayıya çevir (Number)
+      const a = Number(oncekiSayi);
+      const b = Number(suankiSayi);
+      let sonuc = 0;
+
+      // operatöre göre hangi işlemi yapacağına karar ver
+      if (operator === "+") sonuc = a + b;
+      if (operator === "-") sonuc = a - b;
+      if (operator === "*") sonuc = a * b;
+      if (operator === "/") sonuc = a / b;
+
+      suankiSayi = String(sonuc);  // sonucu ekrana yazılabilsin diye stringe çevir
+      oncekiSayi = "";
+      operator = "";
+      ekraniGuncelle();
+    }
+
+    // "C" — her şeyi sıfırla
+    function temizle() {
+      suankiSayi = "";
+      oncekiSayi = "";
+      operator = "";
+      ekraniGuncelle();
+    }
+
+    // "⌫" — son rakamı sil
+    function sil() {
+      suankiSayi = suankiSayi.slice(0, -1);  // son karakteri at
+      ekraniGuncelle();
+    }
+  </script>
+</body>
+</html>
