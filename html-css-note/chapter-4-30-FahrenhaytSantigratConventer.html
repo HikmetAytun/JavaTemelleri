@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            //önce değişken tanımla
+            var f1, c1, f2, c2; 
+
+ 
+            //ziyaretçiden Fahrenheit ve santigrat değerini alın
+            f1=Number(prompt("Fahrenheit değerini yazınız:"));
+            c2=Number(prompt("Santigrat değerini yazınız:"));
+
+            //fahrenhaytı santigrat a dönüşür
+            c1=(f1-32)/1.8;
+            f2=(c2*1.8)+32;
+
+            //ziyaretçiye sonucu yaz
+            document.write("Fahrenheit: "+f1+" Santigrat: "+c1+"<br>");
+            document.write("Santigrat: "+c2+" Fahrenheit: "+f2);
+        </script> 
+    </body>
+</html>
