@@ -122,3 +122,84 @@ y=20;
     🔵  document.write("merhaba <b>ad</b>");
     🔵  document.write("<br>");
     🔵  document.write("web sitemize hoş geldiniz!");
+
+# Aritmetik Operatörler
+
++   Toplama     x=y+2;
+-   Çıkarma     z=z-1;
+*   Çarpma      c=a*b;
+/   Bölme       x=a/b;
+%   Mod(kalan)  m=k%3;
+
+# Artırma ve azaltma operatörleri
+
+C tabanlı dillerde ++ ve -- operatörleri oldukça fazla kullanılmaktadır ve iyi bilinmesinde fayda vardır.
+
+++x:    Önce x'i 1 arttır, daha sonra x değişkenini yeni değeri ile kullan.
+x++:    Önce x değerini kullan, işlemden sonra x değerini 1 artır.
+--x:    Önce x'i 1 azalt, daha sonra x değişkenini yeni değeri ile kullan.
+x--:    Önce x değerinin kullan, işlemden sonra x değerini 1 azalt.
+
+```javascript
+var a = 2;
+document.write(a++);        // önce a değişkenini yazar sonra a değişkenine +1 ekler.
+document.write("<br>");     // br etkiketi ile bir alt satıra geçer.
+document.write(a);          // a değişkenine eklenmiş son halini yazar.
+
+document.write(++a);        // önce a değişkenine +1 ekler sonra a değişkenini yazar
+document.write("<br>");     // br etkiketi ile bir alt satıra geçer.
+document.write(a);          // a değişkeninin son halini yazar.
+
+document.write(a--);        // önce a değişkenini yazar sonra a değişkenine -1.
+document.write("<br>");     // br etkiketi ile bir alt satıra geçer.
+document.write(a);          // a değişkeninin son halini yazar.
+
+document.write(--a);        // önce a değişkenine -1 yapar sonra a değişkenini yazar
+document.write("<br>");     // br etkiketi ile bir alt satıra geçer.
+document.write(a);          // a değişkeninin son halini yazar.
+```
+
+# Eşitlik ve İlişki Operatörleri
+
+İki değerin birbiriyle eşit olup olmadığını veya büyük olup olmadığını ölçmek için kullanılan operatörlerdir.
+Sorgu ifadelerinde veya döngülerde sıklıkla kullanılırlar.
+
+
+``` 
+==      Eşit            x==y
+!=      Eşit Değil      a!=b
+>       Büyük           a>b
+<       Küçük           b<c
+>=      Büyük Eşit      d>=k
+<=      Küçük Eşit      k<=z      
+```
+
+# Atama Operatörleri
+
+Atama operatörleri, atama işlemini yapmak kolaylaştırmak için kullanılan operatörlerdir. Örneğin x=x+1 yerine x+=1 gibi bir operatör kullanılabilir.
+
+``` 
+=       x=y     Atama
++=      x+=y    x=x+y
+-=      x-=y    x=x-y
+*=      x*
+/=
+%=
+```
+
+# Operatör Öncelik Sırası
+- Eğer aynı ifade içinde birden fazla operatör kullanılırsa operatörlerin öncelik sırasına dikkat etmek gerekiyor; önceliği olan operatör işlemini daha önce yapmalıyız.
+
+1- ()
+2- x++, x--
+3- ++y, --y
+4- *, /,  %
+5- +, -
+6- <<, >>
+7- <, >, <=, >=
+8- ==, !=
+9- &
+10- ^
+11- |
+12- &&
+13- ||
