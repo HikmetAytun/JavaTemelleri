@@ -203,3 +203,19 @@ Atama operatörleri, atama işlemini yapmak kolaylaştırmak için kullanılan o
 11- |
 12- &&
 13- ||
+
+# If Komutu
+
+Bilgisayarların en çok yaptığı işlerden biri farklı durumlarda farklı kodlar çalıştırmaktır.
+Örneğin saat 12 olduysa alarm çalışsın.
+
+- If komutu iki farklı şekilde kullanılabilir. Eğer şart gerçekleştiğinde tek bir komut çalıştırılacaksa if komutunun kalıbı aşağıdaki gibi yazılır:
+    if (şart)
+    komut;
+
+- Eğer şart gerçekleştiğinde birden fazla komut çalıştırılacaksa if komutu aşağıdaki gibi yazılmalıdır:
+    if (şart){
+        komut1;
+        komut2;
+    }
+
