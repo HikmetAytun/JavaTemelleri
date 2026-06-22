@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+        <script>
+            // Başla = oku s = s<0 Evet = Yaz "s negatif" / tekrar oku s (yani sayı girme bölümüne dön)
+            // s<0 = Hayır = yazılan sayının karesini al = sonucu yaz = son
+            var sayi, kare;
+            sayi=Number(prompt("sayınızı giriniz: "))
+            if(sayi<0){
+                alert("Girdiğiniz sayı negatif bir sayıdır.");
+                alert("Sayfayı yenileyip tekrar pozitif bir değer giriniz.")}
+            else{
+                kare=sayi*sayi;
+                alert("Girdiğiniz sayının karesi= " + kare);
+            }
+        </script>
+    </body>
+</html>
