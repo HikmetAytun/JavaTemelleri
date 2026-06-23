@@ -10,16 +10,14 @@
 
             //ziyaretçiden yarıçap al 
             r=Number(prompt("Dairenin yarıçapını yazınız:"));
-            
-            //dairenin alanını ve çevresini hesapla hesapla 
-            area=pi*r*r;
-            perimeter=2*pi*r;
 
-            //ziyaretçiye sonucu yaz
+            //yarıçap sorgu ve işlem
             if(r<0){
                 alert("Yarıçap negatif olamaz...");
                 alert("Lütfen sayfayı yenileyerek pozitif değere sahip yarıçap giriniz.");}
             else{
+                area=pi*r*r;
+                perimeter=2*pi*r;
                 alert("alan= "+area+" çevre= "+perimeter);
             }
         </script> 

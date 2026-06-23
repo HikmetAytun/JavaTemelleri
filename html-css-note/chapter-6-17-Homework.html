@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            var vize1, vize2, final, ort;
+            vize1=Number(prompt("1.Vize notunuzu giriniz: "));
+            vize2=Number(prompt("2.Vize notunuzu giriniz: "));
+            final=Number(prompt("Final notunuzu giriniz: "));
+            ort=(((vize1+vize2)/2)*0.40)+(final*0.60);
+            
+            if(ort<50)
+                alert("Ortalamanız= "+ort+" kaldınız.");
+            else
+                alert("Ortalamanız= "+ort+" geçtiniz.");
+        </script> 
+    </body>
+</html>

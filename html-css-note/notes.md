@@ -219,3 +219,43 @@ Bilgisayarların en çok yaptığı işlerden biri farklı durumlarda farklı ko
         komut2;
     }
 
+# Bölüm 7: DÖNGÜLER
+    Döngü nedir?
+    Döngü tipleri
+    For döngüsü
+    While döngüsü
+    Do-While
+    Döngü uygulamaları
+
+**Döngü Nedir?**
+- Bir işlemi belli bir sayıda veya belli bir şart gerçekleştiği sürece tekrar eden kod yapısına döngü denir.
+- Sorgularla beraber döngü komutları programcılıkta en çok kullanılan komutlardır.
+- Örneğin, ekrana 5 defa "Merhaba" yazdırmak istediğinizi düşünün. Burada tekrarlı bir işlem söz konusudur ve bu işlemi halletmenin en kolay yöntemi bir döngü oluşturmaktır.
+Döngü Tipleri
+- Eğer döngü sayısı belli ise bu tür döngülere sabit döngü denir.
+    Sabit döngüleri oluşturmak için for komutu kullanılır.
+- Eğer döngü sayısı belli değilse ve belli bir şart gerçekleştiği sğürece döngü çalışırsa bu tür döngülere şartlı döngü denir.
+    Şartlı döngüleri oluşturmak için while veya do-while komutu kullanılır.
+Döngü Tipleri:
+    Sabit döngü komutları: for
+    Şartlı döngü komutları: while, do-while
+
+**For Döngüsü**
+- Bir işlemin tekrar sayısı belli ise for() döngüsü kullanılır.
+- for() döngüsünde döngünün kaç defa çalıştığını belirleyen bir sayaç, döngünün çalışıp çalışmayacağını belirleyen bir şart ve sayacın artış durumunu belirleyen sayaç artış ifadesi bulunur.
+
+*Tek komut çalıştırılacaksa*
+    for(sayaç; şart; sayaç_artışı)
+    komut;
+*Çok komut çalıştırılacaksa*
+    for(sayaç; şart; sayaç_artışı)
+    {
+    komut1;
+    komut2;
+    ...
+    }
+
+//Ekrana 5 defa "Merhaba JavaScript" yazalım.
+//sayaç 1'den başlar ve 5 oluncaya kadar artar.
+for(var s=1; s<=5; s++)
+document.write("Merhaba JavaScript <br>"); //işlemi yap.
