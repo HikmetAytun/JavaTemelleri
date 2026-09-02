@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+    let n,s,sayi,toplam=0,ort=0;2
+            //n değeri kullanıcıdan al
+            n=Number(prompt("Kaç adet sayının ortalamasını alacaksınız: "));
+            //for döngüsü
+            for(s=1;s<=n;s++){
+                sayi=Number(prompt("Sayı: "));
+                toplam+=sayi; 
+            }
+
+            ort=toplam/n;
+            document.write("For Toplam: "+toplam+" For Ortalama: "+ort+"<br>");
+
+            // document.write("While Toplam: "+toplam+"<br>");
+        </script> 
+    </body>
+</html>

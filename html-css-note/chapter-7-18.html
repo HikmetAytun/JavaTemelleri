@@ -5,23 +5,24 @@
     </head>
     <body>
         <script>
-            //sayıları çift veya tek yazdırma
+            //1'den n'e kadar olan sayıların toplamı
     
             //değişkenler tanımla
-            var s,n;
+            var toplam=0,s,n;
             //n değeri kullanıcıdan al
             n=Number(prompt("n: "));
             //for döngüsü
-            for(s=0;s<=n;s+=2){
-                document.write(s+"<br>");
-            }
+            for(s=1;s<=n;s++)
+            toplam+=s;
+            document.write("For Toplam: "+toplam+"<br>");
 
             //while döngüsü
-            s=0;
+            s=1, toplam=0;
             while(s<=n){
-                document.write(s+"<br>");
-                s+=2;
+                toplam+=s;  
+                s++;
             }
+            document.write("While Toplam: "+toplam+"<br>");
         </script> 
     </body>
 </html>
