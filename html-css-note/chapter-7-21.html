@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>X'ten Y'ye Kadar Sayıların Toplamı</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            //Değişken tanımlayalım.
+            var x,y,toplam=0;
+
+            //x ve y değişkeninin değerlerini kullanıcıdan alalım.
+            x = Number(prompt("x: "));
+            y = Number(prompt("y: "));
+
+            while(x<=y){
+                toplam=toplam+x;
+                x++;
+            }
+
+            document.write("Toplam= "+toplam);
+
+            /* for döngüsü örneği:
+            for(;x<=y; x++){
+                toplam=toplam+x;
+            }
+            document.write("Toplam= "+toplam);
+            */
+        </script> 
+    </body>
+</html>
