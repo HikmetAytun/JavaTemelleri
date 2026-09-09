@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fonksiyon Nedir?</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            // Fonksiyon Nedir?
+            // Ana program tarafından gerektiğinde çağrılıp çalıştırılan program parçacıklarına 
+            // fonksiyon denir. 
+            // Fonksiyonlar, programın daha düzenli ve okunabilir olmasını sağlar.
+            // Program içinde bazı işlemleri sık sık yapıyorsanız her işlem için kod yazmak 
+            // yerine bir defa yazar ve fonksiyon olarak kaydederiz. Daha sonra da gerektiğinde bu
+            // kodları/fonksiyonları çağırıp çalıştırırız. 
+
+            /* Fonksiyon Nasıl Oluşturulur?
+            Fonksiyonlar, function anahtar kelimesi ile oluşturulur.
+            Fonksiyonumuzu aşağıdaki kalıba uygun bir şekilde oluşturabiliriz.
+            
+            function fonksiyonAdi(parametre1, parametre2, parametre3) {
+                // Fonksiyonun yapacağı işlemler
+                kodlar;
+                return değişken; // Fonksiyonun geri döndüreceği değer
+            }
+            */
+
+            /* Fonksiyon Nasıl Çalıştırılır/Çağrılır?
+            Fonksiyonları iki şekilde çağırabiliriz. 
+            1. Kodların arasına yazarak: Çalıştırmak istediğiniz fonksiyonun adını yazarak herhangi bir
+            fonksiyonun çalışmasını sağlayabilirsiniz. Örnek: fonksiyonAdi();
+            2. Bir olayla tetikleyerek: Belirli bir olay gerçekleştiğinde belli bir JavaScript
+            fonksiyonunun çalışmasını sağlayabilirsiniz. Örnek: onclick="fonksiyonAdi()"
+            Örneğin fareyle bir butona tıkladığınızda belirli bir fonksiyonun çalışmasını sağlayabilirsiniz. 
+            Bunun için HTML kodları içinde bir olay tetikleyici kullanılır.
+            Örnek: <input type="button" value="Tıkla" onclick="merhaba()"> 
+
+            Fonksiyonlar, fonksiyon adı ve parantezler ile çağrılır.
+            fonksiyonAdi(parametre1, parametre2, parametre3);
+            */
+
+            /* Fonksiyon Çeşitleri:
+            Değer döndürmeyen fonksiyonlar: Bu fonksiyonlar, çalıştırıldığında herhangi bir değer döndürmezler.
+               * Parametresiz fonksiyonlar: Bu fonksiyonlar, herhangi bir parametre almazlar.
+               * Tek parametreli fonksiyonlar: Bu fonksiyonlar, tek bir parametre alırlar.
+               * Çok parametreli fonksiyonlar: Bu fonksiyonlar, birden fazla parametre alırlar.
+            Değer döndüren fonksiyonlar: Bu fonksiyonlar, çalıştırıldığında bir değer döndürürler.
+               * Parametresiz fonksiyonlar: Bu fonksiyonlar, herhangi bir parametre almazlar.
+               * Tek parametreli fonksiyonlar: Bu fonksiyonlar, tek bir parametre alırlar.
+               * Çok parametreli fonksiyonlar: Bu fonksiyonlar, birden fazla parametre alırlar.
+            */
+
+            function merhaba() {
+                console.log("Merhaba!");
+            }
+        </script> 
+    </body>
+</html>

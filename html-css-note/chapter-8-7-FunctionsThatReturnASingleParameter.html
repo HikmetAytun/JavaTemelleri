@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fonksiyon Nedir?</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            /* Tek parametreli değer döndüren fonksiyonlar 
+                Parametre fonksiyona ana program tarafından gönderilen değerdir.
+                Fonksiyon ana programdan gelen değeri alarak işlem yapar.
+                Aşağıdaki örnekte kupal() fonksiyonu tanımlanmıştır.
+                Fonksiyon ana program tarafından belirtilen değerin küpünü hesaplar ve ana programa döndürür.
+                Örnek:
+                function kupal(x) {
+                    return x*x*x;
+                }
+                var s=Number(prompt("s: "));
+                document.write("Küp: "+kupal(s));
+                */
+               function kupal(x) {
+                return x*x*x;
+               }
+               var sayi=Number(prompt("s: "));
+               document.write("Girdiğiniz sayı: "+sayi+" Küpü: "+kupal(sayi));
+
+        </script> 
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fonksiyon Nedir?</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            /* Çok parametreli değer döndüren fonksiyonlar 
+                Ana programdan fonksiyona bir veya daha fazla değer yani parametre gönderilebilir. 
+                Birden fazla değer gönderilecekse parametreler parantez içine araya virgül konularak yazılır.
+                Örnek:
+                function topla(a, b){
+                var toplam = a + b;
+                return toplam;  //return a+b; şeklinde de yazılabilir.
+                }
+                document.write(topla(2, 5));
+            */
+            function topla(a, b){
+                var toplam = a + b;
+                return toplam;  //return a+b; şeklinde de yazılabilir.
+            }
+            var sayi1=Number(prompt("Sayı 1: "));
+            var sayi2=Number(prompt("Sayı 2: "));
+            document.write("Toplam: " + topla(sayi1, sayi2));
+
+        </script> 
+    </body>
+</html>
