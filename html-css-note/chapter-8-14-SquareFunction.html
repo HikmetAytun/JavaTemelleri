@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kare Fonksiyonu</title>
+        <meta charset="utf-8">
+        <script src="HariciDosya.js"></script>
+
+    </head>
+    <body>
+        <script>
+            function kare(a){       //fonksiyon tanımlanır ve parametre olarak a alınır.
+                //let kare=a*a;          //fonksiyon çağrıldığında a*a işlemi yapılır ve kare değişkenine atanır.
+                return a*a;         //fonksiyon çağrıldığında a*a işlemi yapılır ve geri döndürülür.
+            }
+
+            //prompt ile kullanıcıdan sayi değeri alınır ve Number() ile sayıya çevrilir.
+            let sayi=Number(prompt("Karesini almak istediğiniz sayıyı giriniz:"));   
+            //kare() fonksiyonu çağrılır ve sayi parametre olarak gönderilir. Geri döndürülen değer karesi değişkenine atanır.          
+            // let karesi=kare(sayi);   
+            //document.write() ile ekrana karesi değişkeni yazdırılır.
+            document.write("Girdiğiniz sayı: " + sayi + " Girdiğiniz sayının karesi: " + kare(sayi));
+        </script>
+    </body>
+</html>

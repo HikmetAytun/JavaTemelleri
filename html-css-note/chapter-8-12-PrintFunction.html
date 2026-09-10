@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Yazdırma Fonksiyonu</title>
+        <meta charset="utf-8">
+        <script src="HariciDosya.js"></script>
+
+    </head>
+    <body>
+        <script>
+            /* Yazdırma Fonksiyonu (Print Function)
+                Şu ana kadar herhangi bir değeri yazdırmak için aşağıdaki komutları kullandık:
+                document.write();  //HTML sayfasına yazdırır.
+                alert();           //Uyarı penceresi açar ve yazdırır.
+
+                Bu örneğimizde kendi yazdırma fonksiyonumuzu tanımlayacağız ve sayfaya yazdırma işlemini kolaylaştıracağız.
+                Örnek:
+                function yaz(deger){
+                    document.write(deger+"<br>");
+                } */
+            let ad="Hikmet AYTUN";
+            yaz(ad);
+            yaz("JavaScript ile kendi yazdırma fonksiyonumuzu tanımladık.");
+            let dogumTarihi=1995;
+            yaz("Doğum Tarihi: " + dogumTarihi);
+            let yas=(2026-1995);
+            yaz("Yaş: " + yas);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Yerel ve Küresel Değişkenler</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            /* Değişken Ömrü ve Kapsamı
+                
+                Bir blok{} içinde tanımlanan değişkenler sadece o blok içinde geçerlidir.
+                Bir bloğun içindeki komutlar çalıştıktan sonra o blok içinde tanımlanan değişkenler bellekten silinir.
+                Eğer bu değişkenleri başka bir blok içinde de kullanırsanız "undefined" hatası alırsınız.
+                Değişkenler tanımlandıkları yere göre ikiye ayrılırlar. 
+                1) Yerel Değişkenler (Local Variables)
+                2) Küresel Değişkenler (Global Variables)
+
+            Küresel (Global) Değişkenler
+                
+                Eğer bir değişkenin diğer bloklar tarafından da kullanılmasını istiyorsanız bu değişkeni küresel (global) değişken
+            olarak tanımlamanız gerekir. 
+                
+                Küresel/global olarak tanımlamak istediğiniz değişkeni örnekte görüldüğü gibi <script> tagi içine yazmalısınız.
+            Örnek:
+                <script>
+                    var a, b;   //a ve b değişkenleri küresel/global değişkenlerdir.
+                    function topla(){
+                        var toplam = 0; a=2; b=4;  //toplam a ve b değişkenleri yerel/local değişkenlerdir.
+                        toplam= a+b;
+                        alert(toplam);
+                    }
+                    topla();  //topla fonksiyonu çağrılır.
+
+                    function carp(){
+                        var carpma = 0;  // carpma değişkeni yerel/local değişkendir.
+                        carpma= a*b;    //a ve b değişkenleri küresel/global değişkenlerdir.
+                        alert(carpma);
+                    }
+                    carp();  //carp fonksiyonu çağrılır.
+
+                Yerel değişkenler içinde bulundukları bloğun kodları çalıştıktan sonra bellekten silinirken küresel değişkenler
+            bellekten ancak program sonlandığında silinir. 
+                Bu nedenle küresel değişkenler programın her yerinde kullanılabilirler.*/
+                
+            let a=5, b=7;   //a ve b değişkenleri küresel/global değişkenlerdir.
+            function topla(){
+                var a=1, b=2, toplam=0;  //a, b ve toplam değişkenleri yerel/local değişkenlerdir.
+                toplam= a+b;
+                alert("Toplam: " + toplam);
+            }
+            topla();  //topla fonksiyonu çağrılır.
+
+            function carp(){
+                let carpma=0; // carpma değişkeni yerel/local değişkendir.
+                carpma=a*b;
+                alert("Çarpma: " + carpma);
+            }
+            carp();  //carp fonksiyonu çağrılır.
+        </script> 
+    </body>
+</html>

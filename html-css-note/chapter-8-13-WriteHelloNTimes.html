@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>N defa Merhaba Yaz</title>
+        <meta charset="utf-8">
+        <script src="HariciDosya.js"></script>
+
+    </head>
+    <body>
+        <script>
+            function merhaba(){                     //fonksiyon tanımlanır ve parametre olarak deger alınır.
+                document.write("Merhaba!<br>");     //fonksiyon çağrıldığında ekrana Merhaba! yazdırır.
+            }
+            let n=Number(prompt("Kaç defa merhaba yazdırmak istiyorsunuz?"));   //prompt ile kullanıcıdan n değeri alınır ve Number() ile sayıya çevrilir.
+            for(let i=1; i<=n; i++){                //for döngüsü ile n defa merhaba() fonksiyonu çağrılır.
+                merhaba();                          //fonksiyon çağrılır ve ekrana Merhaba! yazdırılır.
+            }
+        </script>
+    </body>
+</html>

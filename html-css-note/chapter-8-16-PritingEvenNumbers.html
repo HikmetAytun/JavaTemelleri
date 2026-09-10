@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Çift Sayıları Yazdırma Fonksiyonu</title>
+        <meta charset="utf-8">
+        <script src="HariciDosya.js"></script>
+
+    </head>
+    <body>
+        <script>
+            function yazx(x) {                          //fonksiyon tanımlanır ve parametre olarak a ve b alınır.
+                for (let s = 0; s <= x; s+=2) {         //for döngüsü ile a'dan b'ye kadar olan sayılar arasında 2'şer 2'şer artış yapılır ve s değişkenine atanır.
+                    document.write(s + "<br>");          //document.write() ile ekrana s değişkeni yazdırılır.
+                }
+            }
+
+            let n = Number(prompt("Başlangıç sayısını giriniz:"));   //prompt ile kullanıcıdan a değeri alınır ve Number() ile sayıya çevrilir.
+            yazx(n);   //yazx() fonksiyonu çağrılır ve a parametre olarak gönderilir. Geri döndürülen değer ekrana yazdırılır.            
+        </script>
+    </body>
+</html>
