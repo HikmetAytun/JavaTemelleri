@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>n! (n Faktöriyel) Hesaplama</title>
+        <meta charset="utf-8">
+        <script src="HariciDosya.js"></script>
+
+    </head>
+    <body>
+        <script>
+            function nFactorial (x) {
+                let faktoriyel = 1;
+                for (let i = 1; i <= x; i++) {         //for döngüsü ile 1'den n'e kadar olan sayılar arasında artış yapılır ve s değişkenine atanır.
+                    faktoriyel *= i;                   //faktoriyel değişkenine s değişkeni çarpılır.
+                }
+                return faktoriyel;
+            } 
+            let n = Number(prompt("n: "));   //prompt ile kullanıcıdan n değeri alınır ve Number() ile sayıya çevrilir.
+            document.write(n + "! = " + nFactorial(n));   //nFactorial() fonksiyonu çağrılır ve n parametre olarak gönderilir. Geri döndürülen değer ekrana yazdırılır.
+            console.log(n + "! = " + nFactorial(n));   //nFactorial() fonksiyonu çağrılır ve n parametre olarak gönderilir. Geri döndürülen değer console.log() ile konsola yazdırılır.
+        </script>
+    </body>
+</html>

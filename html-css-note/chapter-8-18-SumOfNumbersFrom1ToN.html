@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Çift Sayıları Yazdırma Fonksiyonu</title>
+        <meta charset="utf-8">
+        <script src="HariciDosya.js"></script>
+
+    </head>
+    <body>
+        <script>
+            function ntopla(x){
+                let toplam = 0;
+                for (let i = 1; i <= x; i++) {         //for döngüsü ile 1'den n'e kadar olan sayılar arasında artış yapılır ve s değişkenine atanır.
+                    toplam += i;                       //toplam değişkenine s değişkeni eklenir.
+                }
+                return toplam;
+            }
+            let n = Number(prompt("n: "));   //prompt ile kullanıcıdan n değeri alınır ve Number() ile sayıya çevrilir.
+            document.write("1'den " + n + "'e kadar olan sayıların toplamı: " + ntopla(n));   //ntopla() fonksiyonu çağrılır ve n parametre olarak gönderilir. Geri döndürülen değer ekrana yazdırılır.
+        </script>
+    </body>
+</html>
