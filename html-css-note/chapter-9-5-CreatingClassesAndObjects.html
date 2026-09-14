@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sınıf ve Nesne Oluşturma</title>
+        <meta charset="utf-8">
+        <script src="HariciDosya.js"></script>
+
+    </head>
+    <body>
+        <script>
+            /* 
+            Sınıf Oluşturma
+             - 2015 yılında yayınlanan EcmaScript6 sürümüyle JavaScript'e nesne tabanlı programlama desteği eklenmiştir.
+             - Daha önceki JavaScript sürümlerinde nesne tabanlı programlama fonksiyon ve değişkenler kullanılarak (dolaylı olarak) gerçekleştirilmekteydi.
+             - JavaScript'te bir sınıf oluşturmak için aşağıdaki sözdizimi kullanılır:
+               class SinifAdi {
+                   constructor(parametreler) {
+                       Kodlar // Özelliklerin tanımlanması 
+                   }
+            Örnek:
+                class Uye{                      //Uye adlı sınıf oluşturuluyor
+                    constructor(uyeNo){         //yapıcı fonksiyon sınıfın parametlerini belirler
+                        this.uyeNo = uyeNo;     //this komutu sınıfı temsil eder, sınıf parametresine değer atar.
+                    }
+                }
+
+            - Sınıftan Nesne Oluşturma
+              * var uye1 = new Uye(1); // uye1 nesnesi oluşturuldu, no = 1 atandı.
+              * var uye2 = new Uye(2); // uye2 nesnesi oluşturuldu, no = 2 atandı.
+            */  
+
+        //sınıf tanımlama
+           class Uye{
+               constructor(uyeNo){          //yapıcı fonksiyon sınıfın parametlerini belirler
+                   this.uyeNo = uyeNo;      //this komutu sınıfı temsil eder, sınıf parametresine değer atar.
+               }
+           }
+        //sınıftan nesne oluşturma
+            var uye1 = new Uye(1);          // uye1 nesnesi oluşturuldu, no = 1 atandı.
+            var uye2 = new Uye(2);          // uye2 nesnesi oluşturuldu, no = 2 atandı.
+
+        //üye numarasını ekrana yazdırma
+            document.write("Üye 1 Numarası: " + uye1.uyeNo + "<br>");
+            document.write("Üye 2 Numarası: " + uye2.uyeNo + "<br>");
+        </script>
+    </body>
+</html>
