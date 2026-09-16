@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Daire Sınıfı ve Uygulaması</title>
+        <meta charset="utf-8">
+        <script src="HariciDosya.js"></script>
+
+    </head>
+    <body>
+        <script>
+            /* 
+            Daire Sınıfı ve Uygulaması
+            class Daire {
+                constructor(yaricap){this.yaricap = yaricap;}
+                alan(){return 3.14 * this.yaricap * this.yaricap;}
+                cevre(){return 2 * 3.14 * this.yaricap;}
+                }
+            
+            var r=Number(prompt("Yarıçapı girin:"));
+            var d1 = new Daire(r);
+            document.write("Dairenin alanı: " + d1.alan() + "<br>");
+            document.write("Dairenin çevresi: " + d1.cevre());
+            */
+            class Daire{
+                constructor(yaricap){
+                    this.yaricap=yaricap;
+                }
+
+                alan(){
+                    return 3.14 * this.yaricap * this.yaricap;
+                }
+
+                cevre(){
+                    return 2 * 3.14 * this.yaricap;
+                }
+            }
+
+            //nesne oluşturma
+            let r1=Number(prompt("1.Daire Yarıçap giriniz: "));
+            let d1=new Daire(r1); 
+            document.write("1.Daire Alanı= "+d1.alan()+"<br>");
+            document.write("1.Daire Çevresi= "+d1.cevre()+"<br>");
+
+            //nesne oluşturma
+            let r2=Number(prompt("2.Daire Yarıçap giriniz: "));
+            let d2=new Daire(r2);
+            document.write("2.Daire Alanı= "+d2.alan()+"<br>");
+            document.write("2.Daire Çevresi= ")
+        </script>
+    </body>
+</html>
