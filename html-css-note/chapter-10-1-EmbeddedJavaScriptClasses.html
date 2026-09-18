@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Üçgen Sınıfı ve Uygulaması</title>
+        <meta charset="utf-8">
+        <script src="HariciDosya.js"></script>
+
+    </head>
+    <body>
+        <script>
+           class Dikdortgen {                           // Dikdörtgen sınıfı
+                constructor(kisaKenar,uzunKenar){       // Dikdörtgenin kısa ve uzun kenarlarını alır. Constructor metodu sınıfın bir örneği oluşturulduğunda çalışır.
+                    this.kisaKenar = kisaKenar;         // Kısa kenarı sınıfın özelliği olarak atar. This ifadesi sınıfın kendisini temsil eder.
+                    this.uzunKenar = uzunKenar;         // Uzun kenarı sınıfın özelliği olarak atar. This ifadesi sınıfın kendisini temsil eder.
+                }
+                // Dikdörtgenin alanını ve çevresini hesaplayan metodlar burada tanımlanır.
+                alan(){               
+                    // Alan = kısaKenar * uzunKenar
+                    return this.kisaKenar * this.uzunKenar  // return ifadesi dikdörtgenin alanını döndürür.
+                }
+                cevre(){                                
+                    return 2 * (this.kisaKenar + this.uzunKenar)  // return ifadesi dikdörtgenin çevresini döndürür.
+                }
+           }
+           
+
+           // Dikdörtgenin kısa ve uzun kenarlarını kullanıcıdan alır.
+           let kisa = Number(prompt("Kısa kenar uzunluk giriniz: "));
+           let uzun = Number(prompt("Uzun kenar uzunluk giriniz: "));
+
+           // Dikdörtgen sınıfından bir nesne oluşturur.
+           let d1 = new Dikdortgen(kisa,uzun);             
+
+           // Dikdörtgenin alanını ve çevresini ekrana yazdırır.
+           document.write("Dikdörtgenin alanı= "+d1.alan()+"<br>"+"Dikdörtgenin çevresi= "+d1.cevre());
+            
+        </script>
+    </body>
+</html>

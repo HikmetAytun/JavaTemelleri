@@ -23,29 +23,26 @@
             */
             class Daire{
                 constructor(yaricap){
-                    this.yaricap=yaricap;
+                    this.yaricap = yaricap;
                 }
-
-                alan(){
-                    return 3.14 * this.yaricap * this.yaricap;
-                }
-
-                cevre(){
-                    return 2 * 3.14 * this.yaricap;
-                }
+                    alan(){
+                        return 3.14 * this.yaricap * this.yaricap;
+                    }
+                    cevre(){
+                        return 2 * 3.14 * this.yaricap;
+                    }
             }
+            let yaricap1 = Number(prompt("Yarıçap giriniz: "));
+            let daire1 = new Daire(yaricap1);
+            let yaricap2 = Number(prompt("Yarıçap giriniz: "));
+            let daire2= new Daire(yaricap2);
 
-            //nesne oluşturma
-            let r1=Number(prompt("1.Daire Yarıçap giriniz: "));
-            let d1=new Daire(r1); 
-            document.write("1.Daire Alanı= "+d1.alan()+"<br>");
-            document.write("1.Daire Çevresi= "+d1.cevre()+"<br>");
+            document.write("Daire 1 alanı= "+daire1.alan()+"<br>");
+            document.write("Daire 1 çevresi= "+daire1.cevre()+"<br>");
+            document.write("Daire 2 alanı= "+daire2.alan()+"<br>");
+            document.write("Daire 2 çevresi= "+daire2.cevre());
 
-            //nesne oluşturma
-            let r2=Number(prompt("2.Daire Yarıçap giriniz: "));
-            let d2=new Daire(r2);
-            document.write("2.Daire Alanı= "+d2.alan()+"<br>");
-            document.write("2.Daire Çevresi= ")
+                
         </script>
     </body>
 </html>
